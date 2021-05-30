@@ -2,20 +2,16 @@ import React from 'react'
 import { AppBar, Button, IconButton, Toolbar, makeStyles, ButtonGroup} from '@material-ui/core';
 
 const styles = {
-    toolbarButtons: {
-        marginRight: "auto",
-        fontSize: "large",
-        fontWeight: "bold",
-    },
     appbarColor: {
         backgroundColor: "#ffffff",
     },
     buttons: {
         fontSize: "medium",
-        fontWeight: "600",
+        fontWeight: "800",
     },
     customToolbar: {
-        minHeight: "40px",
+        minHeight: "auto",
+        height: "60px",
         backgroundColor: "#ffffff",
     }
 }
