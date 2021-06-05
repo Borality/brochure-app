@@ -34,7 +34,7 @@ export default function SecondNavbar() {
                             Specials
                         </Button>
                         <Button style = {styles.buttons}>
-                            Papa Rewards
+                            Rewards
                         </Button>
                     </ButtonGroup>
                     <Box pl = {25}>
