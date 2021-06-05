@@ -117,15 +117,6 @@ export default function Navbar() {
                             Sign up
                         </Button>
                         
-                        <Button
-                            aria-controls="customized-menu"
-                            aria-haspopup="true"
-                            variant="contained"
-                            color="primary"
-                            onClick={handleClick}
-                        >
-                            Open Menu
-                        </Button>
                         {/*Bottom selects the dropdown menu depending on value of dropDown*/}
                         {dropDown == 1 
                         ?

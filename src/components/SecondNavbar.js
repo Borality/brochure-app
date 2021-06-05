@@ -1,5 +1,7 @@
 import React from 'react'
-import { AppBar, Button, IconButton, Toolbar, makeStyles, ButtonGroup} from '@material-ui/core';
+import { AppBar, Button, withStyles, Toolbar, makeStyles, ButtonGroup, TextField, Box} from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+
 
 const styles = {
     appbarColor: {
@@ -15,6 +17,8 @@ const styles = {
         backgroundColor: "#ffffff",
     }
 }
+const blackTheme = createMuiTheme({ palette: { primary: { main: "#000000"} } })
+
 
 export default function SecondNavbar() {
     const classes = styles;
@@ -33,6 +37,12 @@ export default function SecondNavbar() {
                             Papa Rewards
                         </Button>
                     </ButtonGroup>
+                    <Box pl = {25}>
+                        <TextField label="Enter promo code" variant="outlined" size="small"/>
+                    </Box>
+                    <MuiThemeProvider>
+                        <Button variant="contained" style = {{color : "white", backgroundColor : "black", borderRadius: "0px 50px 50px 0px", height: "40px"}}>Apply</Button>
+                    </MuiThemeProvider>
                 </Toolbar>
             </AppBar>
         </div>
