@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import AppleIcon from '@material-ui/icons/Apple';
 import AndroidIcon from '@material-ui/icons/Android';
+import pizzaPicture from '../images/pizzaPicture.jpg'
 
 export default function FifthComponent() {
     return (

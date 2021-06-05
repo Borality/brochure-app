@@ -13,7 +13,6 @@ function App() {
       <CustomPizza/>
       <FourthComponent/>
       <FifthComponent/>
-      Test
     </div>
   );
 }
