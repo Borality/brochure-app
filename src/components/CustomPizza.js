@@ -106,9 +106,11 @@ export default function CustomPizza() {
         </Slide>
       </Grid>
       <ThemeProvider theme={theme}>
+        <Box display={{ xs: "none", sm: "none", md: "block" }}>
         <Button style={classes.text1}>
           <span>Add & customize</span>
         </Button>
+        </Box>
       </ThemeProvider>
     </div>
   );

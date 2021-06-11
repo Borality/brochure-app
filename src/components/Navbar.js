@@ -98,7 +98,7 @@ export default function Navbar() {
     <div>
       <AppBar position="sticky" style={classes.appbarColor}>
         <Toolbar style={classes.customToolbar}>
-          <Box marginLeft={2}>
+          <Box ml = {{xs: 0, sm: 4, md: 8, lg: 11}}>
             <img src={pizzaLogo} alt="logo" style={classes.logo} />
           </Box>
           <Box marginLeft="auto" mr={0.5} display="flex" flexDirection="row">

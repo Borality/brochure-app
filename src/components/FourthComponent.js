@@ -7,20 +7,23 @@ import rewards from '../images/rewards.jpg'
 import { makeStyles } from '@material-ui/core/styles'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    [theme.breakpoints.down('sm')]: {
+        maxWidth: 245
+      },
   },
-});
+}));
 
 export default function FourthComponent() {
     const classes = useStyles();
 
     return (
         <div>
-            <Box pt = {7}>
-                <Grid container justify="center">
-                    <Box mx = {2} my = {2}>
+            <Box py = {7}>
+                <Grid container justify="center" spacing = {2}>
+                    <Grid item >
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia disableTouchRipple = "true" component="img" height="140" image = {smallPizza} alt = "pizza" />
@@ -37,9 +40,9 @@ export default function FourthComponent() {
                                 <Button variant = "outlined">Order Now</Button>
                             </CardActionArea>
                         </Card>
-                    </Box>
+                    </Grid>
 
-                    <Box mx = {2} my = {2}>
+                    <Grid item >
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia disableTouchRipple = "true" component="img" height="140" image = {pizzaBox} alt = "test" />
@@ -56,9 +59,9 @@ export default function FourthComponent() {
                                 <Button variant = "outlined">Learn More</Button>
                             </CardActionArea>
                         </Card>
-                    </Box>
+                    </Grid>
 
-                    <Box mx = {2} my = {2}>
+                    <Grid item>
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia disableTouchRipple = "true" component="img" height="140" image = {pizzaEmployees} alt = "test" />
@@ -75,9 +78,9 @@ export default function FourthComponent() {
                                 <Button variant = "outlined">Join Now</Button>
                             </CardActionArea>
                         </Card>
-                    </Box>
+                    </Grid>
 
-                    <Box mx = {2} my = {2}>
+                    <Grid item>
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia disableTouchRipple = "true" component="img" height="140" image = {rewards} alt = "test" />
@@ -88,13 +91,13 @@ export default function FourthComponent() {
                                     </Box>
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Papa Rewards®️ now lets you earn more than free pizza.
+                                    Rewards®️ now lets you earn more than free pizza.
                                 </Typography>
                                 </CardContent>
                                 <Button variant = "outlined">Learn More</Button>
                             </CardActionArea>
                         </Card>
-                    </Box>
+                    </Grid>
                 </Grid>
             </Box>
         </div>
