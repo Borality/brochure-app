@@ -33,13 +33,13 @@ const styles = {
     },
   },
 };
-
+//breakpoint for media queries 
 const useStyles = makeStyles((theme) => ({
   root: {
     fontSize: "1.4rem",
     fontWeight: "700",
     minWidth: 72,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       fontSize: "1rem",
     },
     "&:hover": {
