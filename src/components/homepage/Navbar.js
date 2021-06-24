@@ -8,27 +8,25 @@ import {
 	withStyles,
 	ButtonGroup,
 	Menu,
-	MenuItem,
 	ListItemText,
 	Box,
 	Typography,
 	Divider,
-	IconButton,
 	TextField,
 	Link,
 	Checkbox,
 	Drawer,
 	List,
 	ListItem,
-	ListItemIcon,
+	makeStyles,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LanguageIcon from "@material-ui/icons/Language";
 //Image
-import pizzaLogo from "../images/pizzaLogo.jpg";
+import pizzaLogo from "../../images/pizzaLogo.jpg";
 
-const styles = {
+const useStyles = makeStyles(theme =>({
 	toolbarButtons: {
 		marginLeft: "auto",
 	},
@@ -38,6 +36,10 @@ const styles = {
 	buttons: {
 		fontSize: "0.9rem",
 		fontWeight: "600",
+		borderRadius: "6%",
+		"&:hover": {
+			backgroundColor: "#690000 ",
+		},
 	},
 	logo: {
 		maxWidth: 60,
@@ -45,9 +47,11 @@ const styles = {
 	customToolbar: {
 		minHeight: "auto",
 		height: "80px",
+		[theme.breakpoints.down('sm')]: {
+			height: "70px"
+		  },
 	},
-};
-
+}));
 const StyledMenu = withStyles({
 	paper: {
 		border: "1px solid #9c0000",
@@ -68,19 +72,9 @@ const StyledMenu = withStyles({
 	/>
 ));
 
-const StyledMenuItem = withStyles((theme) => ({
-	root: {
-		"&:focus": {
-			backgroundColor: theme.palette.primary.main,
-			"& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-				color: "#9c0000",
-			},
-		},
-	},
-}))(MenuItem);
 
 export default function Navbar() {
-	const classes = styles;
+	const classes = useStyles();
 	{
 		/*Drop Down is set by use useState, needed two handleClicks*/
 	}
@@ -108,14 +102,14 @@ export default function Navbar() {
 
 	return (
 		<div>
-			<AppBar position="sticky" style={classes.appbarColor}>
-				<Toolbar style={classes.customToolbar}>
+			<AppBar position="sticky" className={classes.appbarColor}>
+				<Toolbar className={classes.customToolbar}>
 					<Box ml={{ xs: 0, sm: 4, md: 8, lg: 11 }}>
-						<img src={pizzaLogo} alt="logo" style={classes.logo} />
+						<img src={pizzaLogo} alt="logo" className={classes.logo} />
 					</Box>
 					<Box marginLeft="auto" mr={0.5} display="flex" flexDirection="row">
 						<Box mx={1.5}>
-							<Button color="inherit" style={styles.buttons}>
+							<Button color="inherit" className={classes.buttons}>
 								Start your order
 							</Button>
 						</Box>
@@ -127,7 +121,7 @@ export default function Navbar() {
 								aria-controls="customized-menu"
 								aria-haspopup="true"
 								onClick={handleClick}
-								style={styles.buttons}
+								className={classes.buttons}
 							>
 								En
 							</Button>
@@ -139,13 +133,13 @@ export default function Navbar() {
 								aria-controls="customized-menu"
 								aria-haspopup="true"
 								onClick={handleClick2}
-								style={styles.buttons}
+								className={classes.buttons}
 							>
 								Login
 							</Button>
 						</Box>
 						<Box mx={1.5} display={{ xs: "none", sm: "none", md: "block" }}>
-							<Button color="inherit" style={styles.buttons}>
+							<Button color="inherit" className={classes.buttons}>
 								Sign up
 							</Button>
 						</Box>

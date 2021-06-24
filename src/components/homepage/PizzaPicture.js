@@ -10,7 +10,7 @@ import {
 	Slide,
 } from "@material-ui/core";
 //Image
-import pizzaPicture from "../images/pizzaPicture.jpg";
+import pizzaPicture from "../../images/pizzaPicture.jpg";
 
 const styles = {
 	picture: {

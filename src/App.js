@@ -1,9 +1,9 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import SecondNavbar from './components/SecondNavbar'
-import PizzaPicture from './components/PizzaPicture'
-import CardsSection from './components/CardsSection'
-import MobileInfo from './components/MobileInfo'
+import Navbar from './components/homepage/Navbar'
+import SecondNavbar from './components/homepage/SecondNavbar'
+import PizzaPicture from './components/homepage/PizzaPicture'
+import CardsSection from './components/homepage/CardsSection'
+import MobileInfo from './components/homepage/MobileInfo'
 
 function App() {
   return (

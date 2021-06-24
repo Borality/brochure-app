@@ -19,7 +19,7 @@ const CardCustom = (props) => {
 	const { title, description, picture, button } = props;
     const classes = useStyles();
 	return (
-		<Card className={classes.root}>
+		<Card className={classes.root} elevation = {0}>
 			<CardActionArea disableTouchRipple>
 				<CardMedia component="img" height="140" image={picture} alt="pizza" />
 				<CardContent>
