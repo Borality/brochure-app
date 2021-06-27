@@ -1,5 +1,6 @@
 //React
 import React from "react";
+import {Link as Link2} from "react-router-dom";
 //MUI components
 import {
 	AppBar,
@@ -104,7 +105,7 @@ export default function Navbar() {
 		<div>
 			<AppBar position="sticky" className={classes.appbarColor}>
 				<Toolbar className={classes.customToolbar}>
-					<Box ml={{ xs: 0, sm: 4, md: 8, lg: 11 }}>
+					<Box component = {Link2} to = "/" ml={{ xs: 0, sm: 4, md: 8, lg: 11 }}>
 						<img src={pizzaLogo} alt="logo" className={classes.logo} />
 					</Box>
 					<Box marginLeft="auto" mr={0.5} display="flex" flexDirection="row">
@@ -139,7 +140,7 @@ export default function Navbar() {
 							</Button>
 						</Box>
 						<Box mx={1.5} display={{ xs: "none", sm: "none", md: "block" }}>
-							<Button color="inherit" className={classes.buttons}>
+							<Button component = {Link2} to = "/SignUp" color="inherit" className={classes.buttons}>
 								Sign up
 							</Button>
 						</Box>
@@ -221,6 +222,7 @@ export default function Navbar() {
 													backgroundColor: "black",
 													color: "white",
 													fontWeight: "700",
+													borderRadius: "30px"
 												}}
 											>
 												Log In

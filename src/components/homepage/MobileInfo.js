@@ -1,6 +1,6 @@
 //React
 import React from "react";
-//MUI component
+//MUI components
 import { Box, Button, Grid, Typography } from "@material-ui/core";
 import AppleIcon from "@material-ui/icons/Apple";
 import AndroidIcon from "@material-ui/icons/Android";

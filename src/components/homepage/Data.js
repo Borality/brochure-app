@@ -1,7 +1,9 @@
+//Images
 import smallPizza from "../../images/smallPizza.jpg";
 import pizzaBox from "../../images/pizzaBox.png";
 import pizzaEmployees from "../../images/pizzaEmployees.jpg";
 import rewards from "../../images/rewards.jpg";
+//Card data
 export default [
 {
     title: "New! Epic Stuffed Crust.",

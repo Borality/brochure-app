@@ -1,20 +1,24 @@
-import './App.css'
-import Navbar from './components/homepage/Navbar'
-import SecondNavbar from './components/homepage/SecondNavbar'
-import PizzaPicture from './components/homepage/PizzaPicture'
-import CardsSection from './components/homepage/CardsSection'
-import MobileInfo from './components/homepage/MobileInfo'
+//Sections
+import HomePage from "./components/homepage/HomePage";
+import SignUp from "./components/signup/SignUp";
+//React Router
+import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 
 function App() {
-  return (
-    <div>
-      <Navbar/>
-      <SecondNavbar/>
-      <PizzaPicture/>
-      <CardsSection/>
-      <MobileInfo/>
-    </div>
-  );
+	return (
+		<div>
+			<Router>
+				<Switch>
+					<Route exact path="/">
+						<HomePage />
+					</Route>
+          <Route path = "/SignUp">
+			  <SignUp/>
+          </Route>
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 
 export default App;
