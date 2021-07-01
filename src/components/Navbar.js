@@ -25,7 +25,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LanguageIcon from "@material-ui/icons/Language";
 //Image
-import pizzaLogo from "../../images/pizzaLogo.jpg";
+import pizzaLogo from "../images/pizzaLogo.jpg";
 
 const useStyles = makeStyles(theme =>({
 	toolbarButtons: {
@@ -252,6 +252,7 @@ export default function Navbar() {
 										style={{ backgroundColor: "#9c0000", color: "white" }}
 										variant="contained"
 										onClick={toggleDrawer}
+										component = {Link2} to = "/SignUp"
 									>
 										Sign Up
 									</Button>

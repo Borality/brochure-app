@@ -1,21 +1,22 @@
 //Sections
 import HomePage from "./components/homepage/HomePage";
 import SignUp from "./components/signup/SignUp";
+import NavBar from "./components/Navbar";
+import SecondNavbar from "./components/SecondNavbar"
 //React Router
-import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
 	return (
 		<div>
 			<Router>
-				<Switch>
-					<Route exact path="/">
-						<HomePage />
-					</Route>
-          <Route path = "/SignUp">
-			  <SignUp/>
-          </Route>
-				</Switch>
+					<NavBar/>
+					<SecondNavbar />
+					<Switch>
+						<Route exact path="/" component={HomePage}/>
+					
+						<Route path="/SignUp" component={SignUp}/>
+					</Switch>
 			</Router>
 		</div>
 	);
