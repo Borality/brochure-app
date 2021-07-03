@@ -5,7 +5,7 @@ import NavBar from "./components/Navbar";
 import SecondNavbar from "./components/SecondNavbar"
 //React Router
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-
+import PrivateRoute from "./components/PrivateRoute";
 function App() {
 	return (
 		<div>
@@ -13,6 +13,7 @@ function App() {
 					<NavBar/>
 					<SecondNavbar />
 					<Switch>
+						<PrivateRoute exact path = "/" component = {HomePage}></PrivateRoute>
 						<Route exact path="/" component={HomePage}/>
 					
 						<Route path="/SignUp" component={SignUp}/>

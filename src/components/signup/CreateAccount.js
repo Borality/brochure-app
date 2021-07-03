@@ -1,6 +1,6 @@
 //React
 import React, { useRef, useState } from "react";
-//AUTH
+//Firebase AUTH
 import { useAuth } from "../../hooks/useAuth";
 import { db } from "../../hooks/useAuth";
 import firebase from "../../hooks/useAuth";
@@ -15,7 +15,7 @@ import {
 } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
 
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 var uid;
 const useStyles = makeStyles((theme) => ({
 	paper: {
