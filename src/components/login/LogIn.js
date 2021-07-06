@@ -41,15 +41,17 @@ const StyledMenu = withStyles({
 export default function LogIn(props) {
 	const auth = useAuth();
 	const { dropDown, anchorEl, handleClose, emailRef, passwordRef } = props;
+	//Error for log in
 	const [error, setError] = useState("");
 	const history = useHistory();
+	const {user} = useAuth();
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
 		try {
 			await auth.login(emailRef.current.value, passwordRef.current.value);
-			setError("It worked");
 			history.push("/");
+			window.location.reload(false)
 		} catch {
 			setError("Entry not valid, try again.");
 		}
@@ -73,7 +75,7 @@ export default function LogIn(props) {
 					onClose={handleClose}
 				>
 					<Box mx={4} my={2}>
-						<Box textAlign="center">Choose Your Language</Box>
+						<Box textAlign="center">Choose Your Language {user.email}</Box>
 						<Box my={2}>
 							<Divider />
 						</Box>

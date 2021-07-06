@@ -6,16 +6,10 @@ import {
 	AppBar,
 	Button,
 	Toolbar,
-	withStyles,
-	ButtonGroup,
-	Menu,
 	ListItemText,
 	Box,
-	Typography,
 	Divider,
 	TextField,
-	Link,
-	Checkbox,
 	Drawer,
 	List,
 	ListItem,
@@ -24,7 +18,6 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LanguageIcon from "@material-ui/icons/Language";
-import { Alert } from "@material-ui/lab";
 //Image
 import pizzaLogo from "../images/pizzaLogo.jpg";
 //Firebase
@@ -72,26 +65,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-//For dropdown menu
-const StyledMenu = withStyles({
-	paper: {
-		border: "1px solid #9c0000",
-	},
-})((props) => (
-	<Menu
-		elevation={0}
-		getContentAnchorEl={null}
-		anchorOrigin={{
-			vertical: "bottom",
-			horizontal: "center",
-		}}
-		transformOrigin={{
-			vertical: "top",
-			horizontal: "center",
-		}}
-		{...props}
-	/>
-));
 
 export default function Navbar() {
 	const classes = useStyles();
@@ -104,11 +77,6 @@ export default function Navbar() {
 	const auth = useAuth();
 	const emailRef = useRef();
 	const passwordRef = useRef();
-	//React router
-	const history = useHistory();
-
-	//Error for login
-	const [error, setError] = useState("");
 
 	var docRef = db.collection("userData").doc(uid);
 
@@ -154,17 +122,6 @@ export default function Navbar() {
 		setDrawerOpen(!drawerOpen);
 	};
 
-	//For log in
-	const handleLogin = async (e) => {
-		try {
-			await auth.login(emailRef.current.value, passwordRef.current.value);
-			setError("It worked");
-			history.push("/");
-		} catch {
-			setError("Email/password is not valid, try again.");
-		}
-	};
-
 	//For log out
 	const logOut = async (e) => {
 		auth.logout();
@@ -181,7 +138,7 @@ export default function Navbar() {
 					<Box marginLeft="auto" mr={0.5} display="flex" flexDirection="row">
 						<Box mx={1.5}>
 							<Button color="inherit" className={classes.buttons}>
-								Start your order {user.firstNameRef}
+								Start your order
 							</Button>
 						</Box>
 						<Box mx={1.5} display={{ xs: "none", sm: "none", md: "block" }}>
