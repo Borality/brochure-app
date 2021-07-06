@@ -167,7 +167,6 @@ export default function CreateAccount() {
 										Create Your Account
 									</Button>
 								</Box>
-								Testing first {data.firstNameRef} and last {data.lastNameRef}
 							</form>
 						</Paper>
 					</Grid>

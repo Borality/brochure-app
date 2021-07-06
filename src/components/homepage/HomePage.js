@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Navbar";
 import PizzaPicture from "./PizzaPicture";
 import CardsSection from "./CardsSection";
 import MobileInfo from "./MobileInfo";

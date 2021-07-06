@@ -1,6 +1,6 @@
 //React
 import React, { useState, useEffect, useRef } from "react";
-import { Link as Link2, useHistory } from "react-router-dom";
+import { Link as Link2 } from "react-router-dom";
 //MUI components
 import {
 	AppBar,
@@ -100,7 +100,7 @@ export default function Navbar() {
 
 	useEffect(() => {
 		getData();
-	}, []);
+	}, );
 
 	//Mostly used for handling the dropdown menu
 	const handleClick = (event) => {
