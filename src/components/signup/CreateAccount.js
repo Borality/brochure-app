@@ -72,7 +72,6 @@ export default function CreateAccount() {
 		try {
 			await auth.signup(emailRef.current.value, passwordRef.current.value);
 			history.push("/");
-			window.location.reload(false)
 		} catch {
 			{
 				passwordRef.current.value.length < 6
@@ -90,6 +89,7 @@ export default function CreateAccount() {
 			})
 			.then(() => {
 				console.log("Document successfully written!");
+				window.location.reload(false)
 			})
 			.catch((error) => {
 				console.error("Error writing document: ", error);
