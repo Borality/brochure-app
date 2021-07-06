@@ -72,6 +72,7 @@ export default function CreateAccount() {
 		try {
 			await auth.signup(emailRef.current.value, passwordRef.current.value);
 			history.push("/");
+			window.location.reload(false)
 		} catch {
 			{
 				passwordRef.current.value.length < 6
