@@ -86,11 +86,9 @@ export default function Navbar() {
 			.get()
 			.then((doc) => {
 				if (doc.exists) {
-					console.log("Document data:", doc.data().userData);
 					setUser(doc.data().userData);
 				} else {
 					// doc.data() will be undefined in this case
-					console.log("No such document!");
 				}
 			})
 			.catch((error) => {
@@ -224,6 +222,7 @@ export default function Navbar() {
 					<List style={{ maxWidth: "300px" }}>
 						<ListItem button onClick={toggleDrawer}>
 							<ListItemText>
+							{!uid && (
 								<Box mb={2}>
 									<Button
 										style={{ backgroundColor: "#9c0000", color: "white" }}
@@ -235,6 +234,7 @@ export default function Navbar() {
 										Sign Up
 									</Button>
 								</Box>
+							)}
 								<Divider></Divider>
 							</ListItemText>
 						</ListItem>
